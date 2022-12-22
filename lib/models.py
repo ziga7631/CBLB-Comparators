@@ -121,39 +121,16 @@ def not_not_or(state, params):
     # Assign params
     params_not = delta_L, gamma_A, n_b, theta_A, eta_a, omega_a, m_a, delta_a, rho_a
     # Read the state
-    L_I, a, b, I = state
+    L_IA, L_IB, a, b, I = state
     # Prepare new states
     # TODO Check if L_I used both times is OK
-    state_one = L_I, I, a
-    state_two = L_I, I, b
+    state_one = L_IA, I, a
+    state_two = L_IB, I, b
     # Observe change in a
-    dL_I, dI = not_cell_wrapper(state_one, params_not)
+    dL_IA, dI = not_cell_wrapper(state_one, params_not)
     # Observe change in b
-    dL_Temp, dTemp = not_cell_wrapper(state_two, params_not)
-    # Sum
-    dL_I += dL_Temp
-    dI += dTemp
-    # Return
-    return dL_I, dI
-
-
-# NEG(A) v NEG(B)
-def probably_wrong_not_not_or(state, params):
-    # Load params
-    delta_L, gamma_A, n_b, theta_A, eta_a, omega_a, m_a, delta_a, rho_a = params
-    # Assign params
-    params_not = delta_L, gamma_A, n_b, theta_A, eta_a, omega_a, m_a, delta_a, rho_a
-    # Read the state
-    L_A, L_B, a, b, I = state
-    # Prepare new states
-    # TODO I think L_ should always be dependant on output - in our case I (see not_not_or)
-    state_one = L_A, I, a
-    state_two = L_B, I, b
-    # Observe change in a
-    dL_A, dI = not_cell_wrapper(state_one, params_not)
-    # Observe change in b
-    dL_B, dTemp = not_cell_wrapper(state_two, params_not)
+    dL_IB, dTemp = not_cell_wrapper(state_two, params_not)
     # Sum
     dI += dTemp
     # Return
-    return dL_A, dL_B, dI
+    return dL_IA, dL_IB, dI
