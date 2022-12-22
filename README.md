@@ -57,3 +57,23 @@ V modelu **comparator_model** (_2\_bit\_identity\_comparator.ipynb_) shranjujemo
 ### Testing the model
 
 ![2-bit identity comparator simulation results](slike/2_bit_identity_comparator/png/comparator_simulation.png)
+
+## 1-bit reversible feynman gate implementation using biological logic blocks
+
+### Building the model
+
+Osnovna implementacija 1-bitnih reverzibilnih Feynman vrat v digitalnih vezjih:
+
+![1-bit reversible feynman gate digital circuit](slike/1_bit_reversible_feynman_gate/png/1_bit_reversible_feynman_gate_original.drawio.png)
+
+Biološki gradniki podpirajo le vrata OR in NOT, zato potrebujemo vezje pretvoriti tako, da bo uporabljalo le te gradnike.
+
+Predelano vezje:
+![1-bit reversible feynman gate converted to only use not and or gates](slike/1_bit_reversible_feynman_gate/png/1_bit_reversible_feynman_gate_not_or.drawio.png)
+
+V modelu **reversible_feynman_gate** (_1\_bit\_reversible\_feynman\_gate.ipynb_) shranjujemo rezultate po naslednji shemi:
+![1-bit reversible feynman gate converted to only use not and or gates with notation](slike/1_bit_reversible_feynman_gate/png/1_bit_reversible_feynman_gate_or_not_with_notation.drawio.png)
+
+### Testing the model
+
+![1-bit reversible feynman gate simulation results](slike/1_bit_reversible_feynman_gate/png/reversible_feynman_gate_simulation.png)
