@@ -96,30 +96,6 @@ def yes_not_or(state, params):
     return dL_B, dI
 
 
-# # NEG(A) v B
-# def not_yes_or(state, params):
-#     # Load params
-#     delta_L, gamma_A, n_b, theta_A, eta_a, omega_a, m_a, delta_a, rho_a = params
-#     # Assign params
-#     params_yes = gamma_A, n_b, theta_A, delta_a, rho_a
-#     params_not = delta_L, gamma_A, n_b, theta_A, eta_a, omega_a, m_a, delta_a, rho_a
-#     # Read the state
-#     L_A, a, b, I = state
-#     # Prepare new states
-#     state_yes = b, I
-#     state_not = L_A, a, I
-#     # Compute the OR
-#     or_output = 0
-#     # Observe change in a
-#     change_L_A, change_a = not_cell_wrapper(state_not, params_not)
-#     or_output += change_a
-#     # Observe change in b
-#     change_a = yes_cell_wrapper(state_yes, params_yes)
-#     or_output += change_a
-#     # Return
-#     return change_L_A, or_output
-
-
 # A v B
 def yes_yes_or(state, params):
     # Load params
