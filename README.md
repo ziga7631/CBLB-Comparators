@@ -54,9 +54,25 @@ Predelano vezje:
 V modelu **comparator_model** (_2\_bit\_identity\_comparator.ipynb_) shranjujemo rezultate po naslednji shemi:
 ![2-bit identity comparator converted to only use not and or gates with notation](slike/2_bit_identity_comparator/png/2_bit_identity_comparator_or_not_with_notation.drawio.png)
 
+## 2-bit magnitude comparator implementation using biological logic blocks
+
+### Building the model
+
+Osnovna implementacija 2-bitnega primerjalnika reda velikosti v digitalnih vezjih:
+
+![2-bit magnitude comparator digital circuit](slike/2_bit_magnitude_comparator/png/2_bit_magnitude_comparator_original.drawio.png)
+
+Biološki gradniki podpirajo le vrata OR in NOT, zato potrebujemo vezje pretvoriti tako, da bo uporabljalo le te gradnike.
+
+Predelano vezje:
+![2-bit magnitude comparator converted to only use not and or gates](slike/2_bit_magnitude_comparator/png/2_bit_magnitude_comparator_or_not.drawio.png)
+
+V modelu **comparator_model** (_2\_bit\_magnitude\_comparator.ipynb_) shranjujemo rezultate po naslednji shemi:
+![2-bit magnitude comparator converted to only use not and or gates with notation](slike/2_bit_magnitude_comparator/png/2_bit_magnitude_comparator_simplified_with_notation.drawio.png)
+
 ### Testing the model
 
-![2-bit identity comparator simulation results](slike/2_bit_identity_comparator/png/comparator_simulation.png)
+![2-bit magnitude comparator simulation results](slike/2_bit_magnitude_comparator/png/comparator_simulation.png)
 
 ## 1-bit reversible feynman gate implementation using biological logic blocks
 

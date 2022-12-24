@@ -123,7 +123,6 @@ def not_not_or(state, params):
     # Read the state
     L_IA, L_IB, a, b, I = state
     # Prepare new states
-    # TODO Check if L_I used both times is OK
     state_one = L_IA, I, a
     state_two = L_IB, I, b
     # Observe change in a
